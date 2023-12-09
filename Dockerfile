@@ -1,9 +1,5 @@
-FROM python:3.9
+FROM python:3.9-alpine
 
 WORKDIR /app
 
-COPY server.py .
-
-EXPOSE 5000
-
-CMD ["python3", "server.py"]
+RUN copy server.py . && expose 5000
